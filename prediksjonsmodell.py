@@ -7,7 +7,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import roc_auc_score, classification_report, roc_curve
 
 # Load the dataset
-file_path = 'Data/butikken.csv'  # Update the path if needed
+file_path = 'Data/input/butikken.csv'  # Update the path if needed
 data = pd.read_csv(file_path)
 
 # Inspect the dataset
@@ -52,7 +52,7 @@ test_results['Predicted_Probability'] = y_pred_proba
 test_results['Predicted_Label'] = y_pred
 
 # Save to CSV
-test_results.to_csv('Data/prediction_results.csv', index=False)
+test_results.to_csv('Data/output/prediction_results.csv', index=False)
 print("Predictions saved to 'prediction_results.csv'.")
 
 # Visualize the ROC curve
